@@ -42,7 +42,7 @@ export default function Navbar() {
         {/* ── Logo: transparent PNG, no background box ── */}
         <Link to="/" className="flex items-center">
           <img
-            src="/assets/logo/kofeetek_logo.svg"
+            src="/assets/logo/Kofeetek_logo.PNG"
             alt="KofeeTek – Feel The Brews"
             className={`object-contain transition-all duration-300 ${scrolled ? 'h-10' : 'h-14'
               }`}

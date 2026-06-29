@@ -52,7 +52,7 @@ export default function Footer() {
         <div className="flex flex-col items-center sm:items-start">
           <Link to="/" className="inline-block mb-5">
             <img
-              src="/assets/logo/kofeetek_logo.svg"
+              src="/assets/logo/Kofeetek_logo.PNG"
               alt="KofeeTek"
               className="h-10 sm:h-12 object-contain"
               style={{ filter:'none' }}

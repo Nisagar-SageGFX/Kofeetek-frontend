@@ -59,7 +59,7 @@ export default function Contact() {
               {[
                 { icon: Phone, label: 'Phone / WhatsApp', value: '+91 80728 47972', href: 'tel:+918072847972' },
                 { icon: Mail,  label: 'Email',            value: 'info@kofeetek.in', href: 'mailto:info@kofeetek.in' },
-                { icon: MapPin,label: 'Head Office',      value: 'PLOT NO: 10, C-Block, G3, Kalpathru Garden, Priya Nagar, Urapakkam, Chennai, Tamil Nadu - 603210.'},
+                { icon: MapPin,label: 'Head Office',      value: 'Plot No: 10, C-Block, G3, Kalpathru Garden, Priya Nagar, Urapakkam, Chennai, Tamil Nadu - 603210.'},
                 { icon: Clock, label: 'Service Hours',    value: 'Mon–Sat: 10AM–6PM\nSunday: Closed' },
               ].map((c, i) => (
                 <a key={i} href={c.href} className="flex items-start gap-3 mb-5 last:mb-0 group">
@@ -79,7 +79,7 @@ export default function Contact() {
               <h3 className="font-semibold mb-3">Quick WhatsApp</h3>
               <p className="text-white/70 text-sm mb-4">Chat with us directly for faster response</p>
               <a
-                href="https://wa.me/918072847972?text=Hi%20KofeeTek%2C%20I%20would%20like%20to%20schedule%20a%20demo."
+                href="https://wa.me/919789728605?text=Hi%20KofeeTek%2C%20I%20would%20like%20to%20schedule%20a%20demo."
                 target="_blank" rel="noopener noreferrer"
                 className="btn-primary w-full justify-center text-sm"
               >

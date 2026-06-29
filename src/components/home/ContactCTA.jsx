@@ -44,7 +44,7 @@ export default function ContactCTA() {
                   { icon: Phone, label:'Call / WhatsApp', value:'+91 80728 47972', href:'tel:+918072847972' },
                   { icon: Phone, label:'Alternate',       value:'+91 97897 28605', href:'tel:+919789728605' },
                   { icon: Mail,  label:'Email Us',        value:'info@kofeetek.in', href:'mailto:info@kofeetek.in' },
-                  { icon: MapPin,label:'Head Office',     value:'PLOT NO: 10, C-Block, G3, Kalpathru Garden, Priya Nagar, Urapakkam, Chennai, Tamil Nadu - 603210.', href:'#' },
+                  { icon: MapPin,label:'Head Office',     value:'Plot No: 10, C-Block, G3, Kalpathru Garden, Priya Nagar, Urapakkam, Chennai, Tamil Nadu - 603210.', href:'#' },
                 ].map((c, i) => (
                   <a key={i} href={c.href}
                     className="glass-card p-4 flex items-center gap-4 hover:bg-white/20 transition-colors group block">
