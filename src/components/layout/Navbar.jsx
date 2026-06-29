@@ -71,11 +71,11 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+919962242499"
+          {/* <a href="tel:+919962242499"
             className="flex items-center gap-1.5 text-[13px] font-medium text-white/75 hover:text-brand-gold transition-colors duration-200"
           >
             <Phone size={13} />+91 99622 42499
-          </a>
+          </a> */}
           <Link to="/contact" className="btn-primary py-2.5 px-5 text-[13px] font-semibold">
             Free Demo
           </Link>
