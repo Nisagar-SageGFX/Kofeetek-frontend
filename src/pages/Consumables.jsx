@@ -104,7 +104,7 @@ export default function Consumables() {
     <>
       <Helmet>
         <title>Beverage Consumables | KofeeTek – Coffee, Tea, Badam, Health Mix Powders</title>
-        <meta name="description" content="KofeeTek premium beverage consumables — Filter Coffee, Assam Tea, Badam Mix, Masala Tea, Chocolate Mix, Jaggery Powder. Supplied in bulk for offices and factories across South India." />
+        <meta name="description" content="KofeeTek premium beverage consumables — Filter Coffee, Assam Tea, Badam Mix, Masala Tea, Chocolate Mix, Jaggery Powder. Supplied in bulk for offices and factories across India." />
       </Helmet>
 
       {/* Header */}

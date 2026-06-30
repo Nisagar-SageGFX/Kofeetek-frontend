@@ -34,7 +34,7 @@ export default function Footer() {
             Ready to Transform Your Workplace Beverage Experience?
           </h2>
           <p className="text-brand-gold/85 text-base sm:text-lg mb-6 sm:mb-8">
-            Join 500+ companies across South India trusting KofeeTek
+            Join 500+ companies across India trusting KofeeTek
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link to="/contact" className="btn-primary w-full sm:w-auto justify-center">Schedule Free Demo</Link>
@@ -59,7 +59,7 @@ export default function Footer() {
             />
           </Link>
           <p className="text-sm leading-relaxed mb-5 text-white/50 max-w-xs sm:max-w-none">
-            South India's premier B2B vending machine manufacturer. ISO registered.
+            India's premier B2B vending machine manufacturer. ISO registered.
             FSSAI certified. Trusted by 500+ corporates since 2017.
           </p>
           <div className="flex gap-2.5">

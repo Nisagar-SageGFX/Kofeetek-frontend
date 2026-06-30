@@ -77,7 +77,7 @@ export default function Navbar() {
             <Phone size={13} />+91 99622 42499
           </a> */}
           <Link to="/contact" className="btn-primary py-2.5 px-5 text-[13px] font-semibold">
-            Free Demo
+            Book Free Demo
           </Link>
         </div>
 

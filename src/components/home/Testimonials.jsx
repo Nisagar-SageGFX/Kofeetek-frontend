@@ -138,7 +138,7 @@ export default function Testimonials() {
           <span className="section-label">Client Reviews</span>
           <h2 className="section-heading">What Our Clients Say</h2>
           <p className="section-subheading mx-auto text-center">
-            Don't take our word for it — here's what 500+ happy clients across South India say.
+            Don't take our word for it — here's what 500+ happy clients across India say.
           </p>
         </div>
 

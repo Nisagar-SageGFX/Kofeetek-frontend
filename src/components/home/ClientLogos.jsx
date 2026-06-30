@@ -20,7 +20,7 @@ export default function ClientLogoSection() {
       <div className="text-center mb-12 px-6">
 
         <p className="text-xs tracking-[5px] uppercase text-[#b09a86] mb-4">
-          Trusted by South India's Leading Companies
+          Trusted by India's Leading Companies
         </p>
         <h2 className="font-display text-3xl md:text-4xl font-semiboldtext-[#2b211c]">
           Our Valued Clients

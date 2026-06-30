@@ -45,7 +45,7 @@ export default function LeadPopup() {
       toast.success('We\'ll contact you within 24 hours!')
     } catch (err) {
       console.error(err)
-      toast.error('Submission failed. Please WhatsApp +91 99622 42499')
+      toast.error('Submission failed. Please WhatsApp +91 8072847972')
     }
     setLoading(false)
   }
@@ -147,7 +147,7 @@ export default function LeadPopup() {
                       {loading ? 'Sending...' : <><Send size={14} /> Schedule Demo</>}
                     </button>
                     <button type="button"
-                      onClick={() => window.open('https://wa.me/919962242499?text=Hi%20KofeeTek%2C%20I%20want%20a%20quote', '_blank')}
+                      onClick={() => window.open('https://wa.me/918072847972?text=Hi%20KofeeTek%2C%20I%20want%20a%20quote', '_blank')}
                       className="btn-brown justify-center text-sm">
                       Request Quote
                     </button>

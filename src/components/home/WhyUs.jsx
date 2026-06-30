@@ -7,7 +7,7 @@ const features = [
   { icon: Award,         title: 'ISO & FSSAI Certified',    desc: 'Every machine and consumable meets ISO and FSSAI quality standards. No compromise.' },
   { icon: HeartHandshake,title: 'Flexible Rental Plans',    desc: 'Zero upfront investment. Monthly rental from ₹2,200. Cancel anytime with 30 days notice.' },
   { icon: Zap,           title: 'Energy Efficient',         desc: 'Eco-friendly design reduces power consumption by up to 40% without affecting performance.' },
-  { icon: Shield,        title: '7+ Years of Trust',        desc: 'Since 2017, serving 500+ corporates across South India with zero-compromise service.' },
+  { icon: Shield,        title: '9+ Years of Trust',        desc: 'Since 2017, serving 500+ corporates across India with zero-compromise service.' },
 ]
 
 export default function WhyUs() {

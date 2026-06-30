@@ -323,7 +323,7 @@ export default function Blog() {
           </h1>
           <p className="text-white/60 text-lg max-w-2xl mx-auto mb-8">
             Expert guides, tips, and industry insights for offices, factories, hospitals
-            and corporates across South India.
+            and corporates across India.
           </p>
           {/* Search */}
           <div className="relative max-w-lg mx-auto">

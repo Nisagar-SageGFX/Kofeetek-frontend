@@ -36,8 +36,8 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact KofeeTek – Book a Free Demo | +91 63691 96624</title>
-        <meta name="description" content="Contact KofeeTek to schedule a free vending machine demo, request a quote, or inquire about rental plans. Serving Chennai, Coimbatore, Bangalore." />
+        <title>Contact KofeeTek – Book a Free Demo | +91 80728 47972</title>
+        <meta name="description" content="Contact KofeeTek to schedule a free vending machine demo, request a quote, or inquire about rental plans. Serving Chennai, Coimbatore, Bangalore, Pune." />
       </Helmet>
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-brand-dark to-brand-brownDark">
@@ -90,7 +90,7 @@ export default function Contact() {
             <div className="card-premium p-5">
               <div className="text-xs text-brand-brown/50 uppercase tracking-wider mb-3">Service Cities</div>
               <div className="flex flex-wrap gap-2">
-                {['Chennai', 'Coimbatore', 'Bangalore', 'Madurai', 'Hosur', 'Salem', 'Tirupur', 'Erode'].map(c => (
+                {['Chennai', 'Coimbatore', 'Bangalore', 'Madurai', 'Hosur', 'Salem', 'Tirupur', 'Erode', 'Pune'].map(c => (
                   <span key={c} className="text-xs bg-brand-beige text-brand-brown px-3 py-1.5 rounded-full">{c}</span>
                 ))}
               </div>
