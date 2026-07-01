@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
+import CoffeeDemoButton from '../ui/CoffeeDemoButton'
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -76,9 +77,7 @@ export default function Navbar() {
           >
             <Phone size={13} />+91 99622 42499
           </a> */}
-          <Link to="/contact" className="btn-primary py-2.5 px-5 text-[13px] font-semibold">
-            Book Free Demo
-          </Link>
+          <CoffeeDemoButton to="/contact" label="Book Free Demo" />
         </div>
 
         {/* Mobile toggle */}
@@ -115,13 +114,12 @@ export default function Navbar() {
                   {link.label}
                 </NavLink>
               ))}
-              <Link
+              <CoffeeDemoButton
                 to="/contact"
+                label="Get Free Demo"
                 onClick={() => setMobileOpen(false)}
-                className="btn-primary w-full justify-center mt-2"
-              >
-                Get Free Demo
-              </Link>
+                className="w-full mt-2"
+              />
             </div>
           </motion.div>
         )}
