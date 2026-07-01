@@ -6,7 +6,7 @@ import { CheckCircle2, ArrowRight, Phone } from 'lucide-react'
 
 const allMachines = [
   {
-    id: 1, category: 'drip',
+    id: 1, category: 'manual',
     name: 'KT Coffee Brewer',
     tagline: 'Classic Filter Coffee, Industrial Grade',
     badge: 'Entry Level',
@@ -17,7 +17,7 @@ const allMachines = [
     specs: { Dimensions: '30×25×70 cm', Weight: '10 kg', Voltage: '220V AC', Cup: '100 ml', Capacity: '300 cups/day' }
   },
   {
-    id: 2, category: 'drip',
+    id: 2, category: 'manual',
     name: 'KT BrewOne with Milk Boiler',
     tagline: 'Coffee + Fresh Milk in One Unit',
     badge: 'Popular',
@@ -28,7 +28,7 @@ const allMachines = [
     specs: { Dimensions: '48×38×75 cm', Weight: '18 kg', Voltage: '220V AC', Cup: '100–180 ml', Capacity: '400 cups/day' }
   },
   {
-    id: 3, category: 'combo',
+    id: 3, category: 'manual',
     name: 'KT 3-in-1 COMBO',
     tagline: 'Coffee + Tea + Milk — One Machine',
     badge: 'Best Seller',
@@ -39,7 +39,7 @@ const allMachines = [
     specs: { Dimensions: '65×45×80 cm', Weight: '26 kg', Voltage: '220V AC', Cup: '100–180 ml', Capacity: '600 cups/day' }
   },
   {
-    id: 4, category: 'combo',
+    id: 4, category: 'manual',
     name: 'KT Trio Brew Plus',
     tagline: 'High Capacity 3-Tank Brewer',
     badge: 'Heavy Duty',
@@ -50,7 +50,7 @@ const allMachines = [
     specs: { Dimensions: '75×50×85 cm', Weight: '32 kg', Voltage: '220V AC', Cup: '100–180 ml', Capacity: '800 cups/day' }
   },
   {
-    id: 5, category: 'premix',
+    id: 5, category: 'automatic',
     name: 'KT FreshMilk Pro 8',
     tagline: '8 Beverage Selections, Fresh Milk Technology',
     badge: 'Premium',
@@ -61,7 +61,7 @@ const allMachines = [
     specs: { Dimensions: '40×38×90 cm', Weight: '22 kg', Voltage: '220V AC', Cup: '80–180 ml', Capacity: '500 cups/day' }
   },
   {
-    id: 6, category: 'premix',
+    id: 6, category: 'automatic',
     name: 'KT Capacitive Touch Brew',
     tagline: 'Smart Touch Interface, Premium Experience',
     badge: 'Smart',
@@ -72,7 +72,7 @@ const allMachines = [
     specs: { Dimensions: '42×40×88 cm', Weight: '20 kg', Voltage: '220V AC', Cup: '80–150 ml', Capacity: '400 cups/day' }
   },
   {
-    id: 7, category: 'beantocup',
+    id: 7, category: 'premix',
     name: 'KT Premix 2 Selection',
     tagline: 'Compact Dual Beverage Machine',
     badge: 'Compact',
@@ -86,10 +86,10 @@ const allMachines = [
 
 const cats = [
   { key: 'all',       label: 'All Machines' },
-  { key: 'drip',      label: 'Drip Brewers' },
-  { key: 'combo',     label: 'Combo Machines' },
-  { key: 'premix',    label: 'Premix / Smart' },
-  { key: 'beantocup', label: 'Compact' },
+  { key: 'manual',    label: 'Manual Brewers' },
+  { key: 'automatic', label: 'Automatic Machines' },
+  { key: 'premix',    label: 'Premix' },
+  // { key: 'beantocup', label: 'Compact' },
 ]
 
 const badgeColors = {
@@ -124,12 +124,12 @@ export default function Products() {
             The Right Machine for <span className="text-brand-gold">Every Workplace</span>
           </h1>
           <p className="text-white/65 text-lg max-w-2xl mx-auto mb-6">
-            From 50-person offices to 5,000-employee factories — KofeeTek has the exact machine your team needs.
+            From 50-person offices to 5000+ employee factories — KofeeTek has the exact machine your team needs.
           </p>
-          <a href="tel:+919962242499"
+          <a href="tel:+918072847972"
             className="inline-flex items-center gap-2 text-brand-gold/80 hover:text-brand-gold transition-colors text-sm">
             <Phone size={14} />
-            Not sure which machine? Call +91 99622 42499
+            Not sure which machine? Call +91 80728 47972
           </a>
         </div>
       </section>

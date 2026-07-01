@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
 const consumables = [
-  { name: 'Filter Coffee Powder', image: '/assets/consumables/coffee.webp',    bg: '#FFF5EE' },
-  { name: 'Fine Assam Tea',       image: '/assets/consumables/tea.webp',        bg: '#F0FFF2' },
-  { name: 'Badam Mix Powder',     image: '/assets/consumables/badam_mix.webp',  bg: '#FFF8F0' },
-  { name: 'Masala Tea',           image: '/assets/consumables/masala_tea.webp', bg: '#FFF5ED' },
-  { name: 'Chocolate Mix',        image: '/assets/consumables/chocolate.webp',  bg: '#FFF2EC' },
-  { name: 'Natural Jaggery',      image: '/assets/consumables/jaggery.webp',    bg: '#FFF8F0' },
-  { name: 'Herbal Lemon Tea',     image: '/assets/consumables/lemon.webp',      bg: '#FFFFF0' },
+  { name: 'Filter Coffee Powder', image: '/assets/consumables/Filter Coffee Powder.webp',    bg: '#FFF5EE' },
+  { name: 'Fine Assam Tea',       image: '/assets/consumables/Fine Assam Tea.webp',        bg: '#F0FFF2' },
+  { name: 'Badam Mix Powder',     image: '/assets/consumables/Badam Mix Powder.webp',  bg: '#FFF8F0' },
+  { name: 'Masala Tea',           image: '/assets/consumables/Masala Tea.webp', bg: '#FFF5ED' },
+  { name: 'Chocolate Mix',        image: '/assets/consumables/Chocolate Mix Powder.webp',  bg: '#FFF2EC' },
+  { name: 'Natural Jaggery',      image: '/assets/consumables/Natural Jaggery Powder.PNG',    bg: '#FFF8F0' },
+  { name: 'Herbal Lemon Tea',     image: '/assets/consumables/Herbal Lemon Tea.webp',      bg: '#FFFFF0' },
 ]
 
 export default function ConsumableSection() {
