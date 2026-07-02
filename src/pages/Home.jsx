@@ -12,11 +12,11 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>KofeeTek – Coffee & Tea Vending Machines Chennai | Feel The Brews</title>
+        <title>Coffee Vending Machines in Chennai | Sales, Rental & Service</title>
         <meta name="description"
-          content="KofeeTek — India's premier B2B coffee & tea vending machine manufacturer. Rental from ₹2,200/month. Serving IT companies, factories, hospitals & corporates in Chennai, Coimbatore, Bangalore. ISO & FSSAI certified." />
+          content="Looking for coffee vending machines in Chennai? We offer sales, rental, installation, and maintenance services with reliable machines for offices and businesses." />
         <meta name="keywords"
-          content="coffee vending machine Chennai, tea vending machine Coimbatore, coffee machine rental Bangalore, office vending machine Tamil Nadu, vending machine manufacturers India" />
+          content="coffee vending machines in chennai" />
         <link rel="canonical" href="https://www.kofeetek.in" />
       </Helmet>
 

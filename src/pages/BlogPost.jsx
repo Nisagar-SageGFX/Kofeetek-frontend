@@ -37,6 +37,7 @@ const KEYWORD_LINKS = [
   { phrase: 'bean to cup machines',                             to: '/products' },
   { phrase: 'tea coffee vending machine in chennai',            to: '/products' },
   { phrase: 'tea coffee vending machine dealers in chennai',    to: '/products' },
+  { phrase: 'tea vending machine',    to: '/products' },
   { phrase: 'tea coffee vending machine',                       to: '/products' },
 
   // Office / corporate → /contact  (lead gen)
