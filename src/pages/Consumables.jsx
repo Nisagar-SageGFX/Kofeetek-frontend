@@ -125,6 +125,7 @@ export default function Consumables() {
       <Helmet>
         <title>Beverage Consumables | KofeeTek – Coffee, Tea, Badam, Health Mix Powders</title>
         <meta name="description" content="KofeeTek premium beverage consumables — Filter Coffee, Assam Tea, Badam Mix, Masala Tea, Chocolate Mix, Jaggery Powder. Supplied in bulk for offices and factories across India." />
+        <link rel="canonical" href="https://www.kofeetek.in" />
       </Helmet>
 
       {/* Header */}
@@ -134,7 +135,7 @@ export default function Consumables() {
         <div className="relative max-w-4xl mx-auto px-4 text-center">
           <span className="section-label">Consumables</span>
           <h1 className="font-display text-5xl font-bold text-white mb-4">
-            Premium Beverage <span className="text-brand-gold">Ingredients</span>
+            Coffee & Tea Vending Machine Consumables —  <span className="text-brand-gold">Bulk Supply Chennai</span>
           </h1>
           <p className="text-white/65 text-lg max-w-2xl mx-auto">
             Sourced, blended and packed in-house. Every consumable is formulated specifically

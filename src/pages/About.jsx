@@ -39,6 +39,7 @@ export default function About() {
       <Helmet>
         <title>About KofeeTek – 9+ Years of Vending Excellence in India</title>
         <meta name="description" content="KofeeTek is an ISO registered coffee and tea vending machine manufacturer with 9+ years of experience serving 500+ corporates across Tamil Nadu and Karnataka." />
+        <link rel="canonical" href="https://www.kofeetek.in" />
       </Helmet>
 
       {/* Hero */}

@@ -126,6 +126,7 @@ export default function Rental() {
       <Helmet>
         <title>Coffee Machine Rental Plans | KofeeTek – From ₹2,500/month</title>
         <meta name="description" content="Rent a coffee or tea vending machine for your office. KofeeTek rental plans start at ₹2,500/month with full service support, refilling, and maintenance included." />
+        <link rel="canonical" href="https://www.kofeetek.in" />
       </Helmet>
 
       {/* Hero */}

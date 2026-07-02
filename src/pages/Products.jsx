@@ -112,6 +112,7 @@ export default function Products() {
       <Helmet>
         <title>Coffee & Tea Vending Machines | KofeeTek Products</title>
         <meta name="description" content="KofeeTek's full machine range — drip brewers, combo machines, fresh milk dispensers and smart vending machines for offices, factories and hospitals in Chennai, Coimbatore, Bangalore." />
+        <link rel="canonical" href="https://www.kofeetek.in" />
       </Helmet>
 
       {/* Header */}

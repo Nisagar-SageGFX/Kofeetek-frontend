@@ -247,6 +247,7 @@ export default function Clients() {
         <title>Our Clients | KofeeTek – Trusted by 500+ Companies</title>
         <meta name="description"
           content="KofeeTek serves 500+ corporate clients including Tata Electronics, Pegatron, UPS India, CBRE, LifeCell across Chennai, Coimbatore and Bangalore." />
+          <link rel="canonical" href="https://www.kofeetek.in" />
       </Helmet>
 
       {/* ── Page hero ── */}

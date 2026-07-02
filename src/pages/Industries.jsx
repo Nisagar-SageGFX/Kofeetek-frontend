@@ -102,6 +102,7 @@ export default function Industries() {
       <Helmet>
         <title>Industries We Serve | KofeeTek Vending Machines</title>
         <meta name="description" content="KofeeTek serves IT companies, hospitals, hotels, cafés, factories and corporate offices across South India with premium coffee & tea vending machines." />
+        <link rel="canonical" href="https://www.kofeetek.in" />
       </Helmet>
 
       <style>{`
@@ -223,7 +224,7 @@ export default function Industries() {
       <section className="hind-section">
         <div className="hind-header">
           <span className="hind-label">Industries Served</span>
-          <h2 className="hind-title">Trusted Across Every Industry</h2>
+          <h1 className="hind-title">Trusted Across Every Industry</h1>
           <p className="hind-sub">From 50-employee startups to 5,000-employee factories — our machines scale with your workforce.</p>
         </div>
 

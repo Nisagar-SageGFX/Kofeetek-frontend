@@ -165,7 +165,7 @@ const POST_SEO = {
     metaDesc:  'Rent a coffee vending machine in Chennai for your office at competitive prices. KofeeTek offers flexible coffee machine rental plans with free installation & service.',
   },
   'filter-coffee-vending-machine-vs-instant-coffee-which-is-better': {
-    metaTitle: 'Tea Coffee Vending Machine Dealers in Chennai | KofeeTek',
+    metaTitle: 'Tea Coffee Vending Machine Manufacturers in Chennai | KofeeTek',
     metaDesc:  'KofeeTek is one of the best tea coffee vending machine dealers in Chennai. Explore our filter coffee & instant coffee machines for offices and institutions.',
   },
   'vending-machine-maintenance-tips-office': {

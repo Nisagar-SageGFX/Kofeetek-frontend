@@ -38,6 +38,7 @@ export default function Contact() {
       <Helmet>
         <title>Contact KofeeTek – Book a Free Demo | +91 80728 47972</title>
         <meta name="description" content="Contact KofeeTek to schedule a free vending machine demo, request a quote, or inquire about rental plans. Serving Chennai, Coimbatore, Bangalore, Pune." />
+        <link rel="canonical" href="https://www.kofeetek.in" />
       </Helmet>
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-brand-dark to-brand-brownDark">
@@ -46,7 +47,7 @@ export default function Contact() {
           <h1 className="font-display text-5xl font-bold text-white mb-4">
             Let's Talk <span className="text-brand-gold">Coffee</span>
           </h1>
-          <p className="text-white/70 text-lg">Book a free demo, request a quote, or just say hello. Our team responds within 24 hours.</p>
+          <p className="text-white/70 text-lg">Book a Free Demo — Coffee Vending Machines in Chennai. Our team responds within 24 hours.</p>
         </div>
       </section>
 

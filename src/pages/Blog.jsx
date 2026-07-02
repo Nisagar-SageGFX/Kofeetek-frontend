@@ -76,7 +76,7 @@ Ready to change the way your office coffee game is played? Contact us today, and
 
   },
   {
-    slug: 'office-coffee-machine-rental-bangalore',
+    slug: 'office-coffee-machine-manufacturer-chennai',
     title: 'coffee vending machine manufacturers in Chennai',
     excerpt: 'In the fast-moving work culture, there is no time for anything but drinking coffee during working time, which has become a culture in many workplaces. The small cup of coffee makes a big difference in the workplace  it energizes the employee, builds a good relationship with coworkers, focuses on work, shares their ideas, and helps to develop good conversation in the workplace apart from the screening time. Let get started and see how coffee makers have shaped office culture.',
     category: 'Rental',
@@ -222,7 +222,7 @@ Want to make your office better? Learn about the top coffee vending machine manu
 Call us 24/7: +91 99622 42499`
   },
   {
-    slug: 'Tea-vending-machine-manufacturers-in-chennai',
+    slug: 'tea-vending-machine-manufacturers-in-chennai',
     title: 'Tea Vending Machine Manufacturers in Chennai',
     excerpt: 'In today’s fast-paced work culture, a hot cup of tea isn’t just a beverage; it’s a moment of comfort, energy, and connection. Whether in IT companies, factories, schools, or showrooms, businesses are choosing local Tea vending machine manufacturers in Chennai for their reliability, taste accuracy, and hassle-free service. These machines do more than pour tea; they keep teams refreshed and focused. Let’s take a closer look at the key reasons why local manufacturers have become the go-to choice for Chennai’s workplaces.',
     category: 'IT Industries',
