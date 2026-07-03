@@ -12,11 +12,9 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Coffee Vending Machines in Chennai | Sales, Rental & Service</title>
-        <meta name="description"
-          content="Looking for coffee vending machines in Chennai? We offer sales, rental, installation, and maintenance services with reliable machines for offices and businesses." />
-        <meta name="keywords"
-          content="coffee vending machines in chennai" />
+        <title>Best Coffee Vending Machine in Chennai | Kofeetek</title>
+        <meta name="description" content="Looking for a coffee vending machine Chennai? Kofeetek provides advanced coffee vending machines with hassle-free installation, maintenance, and customized beverage solutions for businesses." />
+        <meta name="keywords" content="coffee vending machine Chennai, tea vending machine, vending machine manufacturer, coffee machine" />
         <link rel="canonical" href="https://www.kofeetek.in" />
       </Helmet>
 

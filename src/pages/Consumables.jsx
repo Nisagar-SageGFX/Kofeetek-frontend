@@ -8,7 +8,7 @@ const consumables = [
   {
     name: 'Filter Coffee Powder',
     subtitle: 'Vend & Blend',
-    image: '/assets/consumables/Filter Coffee Powder.webp',
+    image: '/assets/consumables/coffee.webp',
     color: '#4A2C1D',
     light: '#FFF0E6',
     desc: 'Premium Arabica & Robusta blend roasted to South Indian perfection. Rich aroma, strong body.',
@@ -18,7 +18,7 @@ const consumables = [
   {
     name: 'Fine Assam Tea Powder',
     subtitle: 'CTC Premium Blend',
-    image: '/assets/consumables/Fine Assam Tea.webp',
+    image: '/assets/consumables/tea.webp',
     color: '#2E6B35',
     light: '#F0FFF2',
     desc: 'Selected Assam CTC leaves for excellent milk tea performance. Strong liquor, vibrant color.',
@@ -28,7 +28,7 @@ const consumables = [
   {
     name: 'Badam Mix Powder',
     subtitle: 'Real Almond Blend',
-    image: '/assets/consumables/Badam Mix Powder.webp',
+    image: '/assets/consumables/badam_mix.webp',
     color: '#C2773A',
     light: '#FFF8F0',
     desc: 'Real almonds, saffron, cardamom — a premium health drink loved by every workplace.',
@@ -38,7 +38,7 @@ const consumables = [
   {
     name: 'Masala Tea Powder',
     subtitle: 'Spiced Chai Blend',
-    image: '/assets/consumables/Masala Tea.webp',
+    image: '/assets/consumables/masala_tea.webp',
     color: '#7B3F00',
     light: '#FFF5ED',
     desc: 'Ginger, cardamom, cinnamon and clove — our masala chai is a workforce favourite.',
@@ -48,7 +48,7 @@ const consumables = [
   {
     name: 'Chocolate Mix Powder',
     subtitle: 'Rich Cocoa Blend',
-    image: '/assets/consumables/Chocolate Mix Powder.webp',
+    image: '/assets/consumables/chocolate.webp',
     color: '#3D1F0D',
     light: '#FFF2EC',
     desc: 'Rich cocoa powder blend — perfect for cold mornings and employee delight.',
@@ -56,9 +56,19 @@ const consumables = [
     packs: ['200g']
   },
   {
+    name: 'Natural Jaggery Powder',
+    subtitle: 'Chemical-Free Sweetener',
+    image: '/assets/consumables/jaggery.webp',
+    color: '#7C4D2A',
+    light: '#FFF8F0',
+    desc: 'Pure sugarcane jaggery — the healthier alternative to refined sugar for office beverages.',
+    details: ['100% natural', 'No chemical processing', 'Distinct caramel taste', 'Diabetic-friendly option'],
+    packs: ['200g']
+  },
+  {
     name: 'Herbal Lemon Tea Mix',
     subtitle: 'Citrus Refresh Blend',
-    image: '/assets/consumables/Herbal Lemon Tea.webp',
+    image: '/assets/consumables/lemon.webp',
     color: '#B8860B',
     light: '#FFFFF0',
     desc: 'Refreshing herbal lemon tea — excellent for afternoon energy without caffeine.',
@@ -68,7 +78,7 @@ const consumables = [
   {
     name: 'Protein Ragi Malt',
     subtitle: 'Health Drink',
-    image: '/assets/consumables/Protein Ragi Malt.png',
+    image: '/assets/consumables/coffee.webp',
     color: '#5A7A3A',
     light: '#F5FFF0',
     desc: 'Nutrient-dense ragi malt with natural sweeteners — a healthy choice for health-conscious workplaces.',
@@ -76,39 +86,9 @@ const consumables = [
     packs: ['200g']
   },
   {
-    name: 'Protein Choco Drink',
-    subtitle: 'Health Drink',
-    image: '/assets/consumables/Protein Choco Drink.png',
-    color: '#B8860B',
-    light: '#FFFFF0',
-    desc: 'Rich chocolate-flavoured protein drink mix that delivers great taste and essential protein, making it ideal for workplaces, cafeterias, and vending machines.',
-    details: ['High in protein', 'Rich chocolate flavour', 'Quick and easy to prepare', 'Ideal for offices, hospitals & cafeterias'],
-    packs: ['200g']
-  },
-  {
-    name: 'Natural Jaggery Powder',
-    subtitle: 'Chemical-Free Sweetener',
-    image: '/assets/consumables/Natural Jaggery Powder.PNG',
-    color: '#7C4D2A',
-    light: '#FFF8F0',
-    desc: 'Pure sugarcane jaggery — the healthier alternative to refined sugar for office beverages.',
-    details: ['100% natural', 'No chemical processing', 'Distinct caramel taste', 'Diabetic-friendly option'],
-    packs: ['200g']
-  },
-  {
-    name: 'Refined Sugar',
-    subtitle: 'Premium Refined Sugar',
-    image: '/assets/consumables/Premium Refined Sugar.png',
-    color: '#4A2C1D',
-    light: '#FFF0E6',
-    desc: 'Premium-quality refined sugar that dissolves quickly, delivering consistent sweetness for coffee, tea, and other hot beverages.',
-    details: ['Premium quality', 'Quick dissolving', 'Consistent sweetness', 'Ideal for coffee and tea'],
-    packs: ['200g']
-  },
-  {
     name: 'Paper Cups',
     subtitle: 'FSC Certified',
-    image: '/assets/consumables/Cups.PNG',
+    image: '/assets/consumables/Cups1.PNG',
     color: '#9B7653',
     light: '#FFF8F0',
     desc: 'Food-grade, biodegradable paper cups available in 100ml and 180ml sizes.',
@@ -123,9 +103,10 @@ export default function Consumables() {
   return (
     <>
       <Helmet>
-        <title>Beverage Consumables | KofeeTek – Coffee, Tea, Badam, Health Mix Powders</title>
-        <meta name="description" content="KofeeTek premium beverage consumables — Filter Coffee, Assam Tea, Badam Mix, Masala Tea, Chocolate Mix, Jaggery Powder. Supplied in bulk for offices and factories across India." />
-        <link rel="canonical" href="https://www.kofeetek.in" />
+        <title>Filter Coffee Vending Machine Manufacturers in Chennai | Kofeetek</title>
+        <meta name="description" content="Kofeetek is a leading filter coffee vending machine manufacturer in Chennai, offering premium machines for offices, hotels, restaurants, and commercial spaces with installation, maintenance, and reliable support." />
+        <meta name="keywords" content="filter coffee vending machine manufacturers in Chennai, fresh filter coffee vending machine, commercial coffee dispenser Chennai, industrial filter coffee machine Chennai" />
+        <link rel="canonical" href="https://www.kofeetek.in/consumables" />
       </Helmet>
 
       {/* Header */}
@@ -135,7 +116,7 @@ export default function Consumables() {
         <div className="relative max-w-4xl mx-auto px-4 text-center">
           <span className="section-label">Consumables</span>
           <h1 className="font-display text-5xl font-bold text-white mb-4">
-            Coffee & Tea Vending Machine Consumables —  <span className="text-brand-gold">Bulk Supply Chennai</span>
+            Premium Beverage <span className="text-brand-gold">Ingredients</span>
           </h1>
           <p className="text-white/65 text-lg max-w-2xl mx-auto">
             Sourced, blended and packed in-house. Every consumable is formulated specifically

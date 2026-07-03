@@ -2,19 +2,19 @@ import { useRef, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 // ── Local images (from public/assets/images/) ────────────────────────────────
-// import imgIT          from '/assets/images/It Company.jpg'
-// import imgAuto        from '/assets/images/Automobile.jpg'
-// import imgCollege     from '/assets/images/College.jpg'
-// import imgCommercial  from '/assets/images/Commercial.png'
-// import imgLogistics   from '/assets/images/Logistics.jpg'
-// import imgBank        from '/assets/images/Bank.jpg'
+import imgIT          from '/assets/images/It Company.jpg'
+import imgAuto        from '/assets/images/Automobile.jpg'
+import imgCollege     from '/assets/images/College.jpg'
+import imgCommercial  from '/assets/images/Commercial.png'
+import imgLogistics   from '/assets/images/Logistics.jpg'
+import imgBank        from '/assets/images/Bank.jpg'
 
 // ── Café & Hotel: add your own images to public/assets/images/ and update these paths
 // e.g. import imgCafe  from '/assets/images/Cafe.jpg'
 // e.g. import imgHotel from '/assets/images/Hotel.jpg'
 // Until then, falling back to Unsplash placeholders ↓
-// const imgCafe  = 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80&fit=crop'
-// const imgHotel = 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80&fit=crop'
+const imgCafe  = 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80&fit=crop'
+const imgHotel = 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80&fit=crop'
 
 const industries = [
   {
@@ -22,60 +22,57 @@ const industries = [
     count: '120+',
     desc:  'Tech parks, BPOs and software companies across Chennai & Bangalore.',
     badge: 'Top Sector',
-    image: '/assets/images/It.jpg',
+    image: imgIT,
   },
-  {
-    title: 'Corporate Offices',
-    count: '180+',
-    desc:  'MNC campuses, co-working spaces, banks and NBFC head offices.',
-    badge: 'Top Performer',
-    image: '/assets/images/Commercial.png',
-  },
-  {
-    title: 'Cafés & Coffee Shops',
-    count: '25+',
-    desc:  'Specialty cafés, quick-service coffee outlets and brew bars.',
-    badge: 'New Sector',
-    image: '/assets/images/Coffee.jpg',
-  },
-  {
-    title: 'Hotels & Hospitality',
-    count: '35+',
-    desc:  'Business hotels, resorts, banquet halls and guest houses.',
-    badge: 'Premium Sector',
-    image: '/assets/images/Hotels.jpg',
-  },
-  
   {
     title: 'Manufacturing & Factories',
     count: '80+',
     desc:  'Automobile, textile, pharma and electronics manufacturing plants.',
     badge: 'High Volume',
-    image: '/assets/images/Automobile.jpg',
+    image: imgAuto,
   },
   {
     title: 'Hospitals & Healthcare',
     count: '50+',
     desc:  'Multi-specialty hospitals, diagnostic labs and healthcare facilities.',
     badge: 'Hygiene Certified',
-    image: '/assets/images/Hospital.jpg',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80&fit=crop',
   },
   {
     title: 'Educational Institutions',
     count: '40+',
     desc:  'Engineering colleges, MBA institutes and training centres.',
     badge: 'Trusted Sector',
-    image: '/assets/images/College.jpg',
+    image: imgCollege,
   },
-  
+  {
+    title: 'Corporate Offices',
+    count: '180+',
+    desc:  'MNC campuses, co-working spaces, banks and NBFC head offices.',
+    badge: 'Top Performer',
+    image: imgCommercial,
+  },
   {
     title: 'Warehouses & Logistics',
     count: '30+',
     desc:  'Logistics hubs, SEZs and large-scale warehouses.',
     badge: 'Trusted Sector',
-    image: '/assets/images/Logistics.jpg',
+    image: imgLogistics,
   },
-  
+  {
+    title: 'Cafés & Coffee Shops',
+    count: '25+',
+    desc:  'Specialty cafés, quick-service coffee outlets and brew bars.',
+    badge: 'New Sector',
+    image: imgCafe,
+  },
+  {
+    title: 'Hotels & Hospitality',
+    count: '35+',
+    desc:  'Business hotels, resorts, banquet halls and guest houses.',
+    badge: 'Premium Sector',
+    image: imgHotel,
+  },
 ]
 
 export default function Industries() {
@@ -100,9 +97,10 @@ export default function Industries() {
   return (
     <>
       <Helmet>
-        <title>Industries We Serve | KofeeTek Vending Machines</title>
-        <meta name="description" content="KofeeTek serves IT companies, hospitals, hotels, cafés, factories and corporate offices across South India with premium coffee & tea vending machines." />
-        <link rel="canonical" href="https://www.kofeetek.in" />
+        <title>Best Fresh Milk Tea Coffee Vending Machine Dealers | Kofeetek</title>
+        <meta name="description" content="Kofeetek is one of the best fresh milk tea coffee vending machine dealers, offering premium vending machines for offices, hotels, cafés, and commercial spaces with installation, maintenance, and reliable support." />
+        <meta name="keywords" content="best fresh milk tea coffee vending machine dealers in Chennai, fresh milk coffee machine for office, commercial coffee vending machine Chennai, beverage vending machine Chennai" />
+        <link rel="canonical" href="https://www.kofeetek.in/industries" />
       </Helmet>
 
       <style>{`
@@ -166,7 +164,7 @@ export default function Industries() {
           transform:scale(1);transition:transform .45s ease;will-change:transform;
         }
         .hind-ov {
-          position:none;inset:0;
+          position:absolute;inset:0;
           background:linear-gradient(158deg,rgba(13,6,3,.50) 0%,rgba(13,6,3,.80) 55%,rgba(13,6,3,.97) 100%);
           transition:background .4s ease;
         }
@@ -224,7 +222,7 @@ export default function Industries() {
       <section className="hind-section">
         <div className="hind-header">
           <span className="hind-label">Industries Served</span>
-          <h1 className="hind-title">Trusted Across Every Industry</h1>
+          <h2 className="hind-title">Trusted Across Every Industry</h2>
           <p className="hind-sub">From 50-employee startups to 5,000-employee factories — our machines scale with your workforce.</p>
         </div>
 

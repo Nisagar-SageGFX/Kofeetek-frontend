@@ -5,7 +5,7 @@ import { Award, Users, MapPin, Coffee, CheckCircle2, Target, Eye } from 'lucide-
 import CountUp from 'react-countup'
 
 const timeline = [
-  { year: '2017', title: 'Founded in Chennai', desc: 'Started with 5 machines and a dream to transform workplace beverages in India.' },
+  { year: '2017', title: 'Founded in Chennai', desc: 'Started with 5 machines and a dream to transform workplace beverages in South India.' },
   { year: '2019', title: 'Expanded to Coimbatore', desc: 'Crossed 100 clients. Launched dedicated service centre in Coimbatore.' },
   { year: '2021', title: 'ISO Registration', desc: 'Received ISO certification for manufacturing excellence and service quality.' },
   { year: '2022', title: 'Karnataka Entry', desc: 'Expanded operations to Bangalore and Hosur to serve the growing industrial corridor.' },
@@ -16,7 +16,7 @@ const values = [
   { icon: Coffee,    title: 'Quality First',      desc: 'Every machine and consumable meets ISO standards. No compromise.' },
   { icon: Users,     title: 'Client Partnership', desc: 'We\'re not a vendor — we\'re a long-term beverage partner.' },
   { icon: Target,    title: 'Zero Downtime Goal', desc: '24-hour service response. Your machine is always running.' },
-  { icon: MapPin,    title: 'Local Excellence',   desc: 'Deep roots in India. We understand local taste and culture.' },
+  { icon: MapPin,    title: 'Local Excellence',   desc: 'Deep roots in South India. We understand local taste and culture.' },
 ]
 
 function StatBox({ end, suffix, label, delay }) {
@@ -37,9 +37,10 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About KofeeTek – 9+ Years of Vending Excellence in India</title>
-        <meta name="description" content="KofeeTek is an ISO registered coffee and tea vending machine manufacturer with 9+ years of experience serving 500+ corporates across Tamil Nadu and Karnataka." />
-        <link rel="canonical" href="https://www.kofeetek.in" />
+        <title>Tea Coffee Maker Machine for Office | Kofeetek</title>
+        <meta name="description" content="Looking for a tea coffee maker machine for office? Kofeetek offers reliable, easy-to-use beverage machines that serve fresh tea and coffee, ideal for offices, workplaces, and commercial spaces with expert support." />
+        <meta name="keywords" content="tea coffee maker machine for office, office tea coffee machine, commercial tea coffee machine, office coffee dispenser" />
+        <link rel="canonical" href="https://www.kofeetek.in/about" />
       </Helmet>
 
       {/* Hero */}
@@ -50,10 +51,10 @@ export default function About() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <span className="section-label">Our Story</span>
             <h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              9+ Years of Brewing<br /><span className="text-brand-gold">Excellence</span>
+              7 Years of Brewing<br /><span className="text-brand-gold">Excellence</span>
             </h1>
             <p className="text-white/70 text-xl leading-relaxed max-w-2xl mx-auto">
-              From a Chennai garage to India's most trusted B2B vending machine company —
+              From a Chennai garage to South India's most trusted B2B vending machine company —
               KofeeTek's story is one of obsessive quality and uncompromising service.
             </p>
           </motion.div>
@@ -64,9 +65,9 @@ export default function About() {
       <section className="bg-brand-brown py-14">
         <div className="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
           <StatBox end={500} suffix="+" label="Corporate Clients" delay={0} />
-          <StatBox end={9}   suffix="+"  label="Years Experience" delay={0.2} />
+          <StatBox end={7}   suffix="+"  label="Years Experience" delay={0.2} />
           <StatBox end={15000} suffix="+" label="Cups Served Daily" delay={0.4} />
-          <StatBox end={4}   suffix=""   label="States Covered" delay={0.6} />
+          <StatBox end={6}   suffix=""   label="Cities Served" delay={0.6} />
         </div>
       </section>
 

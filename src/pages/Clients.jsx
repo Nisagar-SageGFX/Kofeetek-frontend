@@ -244,10 +244,10 @@ export default function Clients() {
   return (
     <>
       <Helmet>
-        <title>Our Clients | KofeeTek – Trusted by 500+ Companies</title>
-        <meta name="description"
-          content="KofeeTek serves 500+ corporate clients including Tata Electronics, Pegatron, UPS India, CBRE, LifeCell across Chennai, Coimbatore and Bangalore." />
-          <link rel="canonical" href="https://www.kofeetek.in" />
+        <title>Filter Coffee Vending Machine Dealers in Chennai | Kofeetek</title>
+        <meta name="description" content="Kofeetek is a trusted filter coffee vending machine dealer in Chennai, offering high-quality machines for offices, hotels, restaurants, and commercial spaces with installation, maintenance, and reliable after-sales support." />
+        <meta name="keywords" content="filter coffee vending machine dealers in Chennai, South Indian filter coffee machine, filter coffee vending machine suppliers Chennai, coffee dispenser for office" />
+        <link rel="canonical" href="https://www.kofeetek.in/clients" />
       </Helmet>
 
       {/* ── Page hero ── */}
@@ -260,11 +260,11 @@ export default function Clients() {
             Trusted by <span className="text-brand-gold">500+ Companies</span>
           </h1>
           <p className="text-white/65 text-lg max-w-2xl mx-auto">
-            From Chennai tech parks to Bangalore campuses — India's best companies choose KofeeTek.
+            From Chennai tech parks to Bangalore campuses — South India's best companies choose KofeeTek.
           </p>
           {/* Quick stats */}
           <div className="flex flex-wrap justify-center gap-8 mt-10">
-            {[['500+','machine installations'],['9+','Years Serving'],['4+','states Covered'],['20+','Major Brands']].map(([val, lbl]) => (
+            {[['500+','Corporate Clients'],['7+','Years Serving'],['6','Cities Covered'],['36+','Major Brands']].map(([val, lbl]) => (
               <div key={lbl} className="text-center">
                 <div className="font-display text-3xl font-bold text-brand-gold">{val}</div>
                 <div className="text-white/50 text-xs mt-1">{lbl}</div>
@@ -281,7 +281,7 @@ export default function Clients() {
             <span className="section-label">Our Valued Clients</span>
             <h2 className="section-heading">Companies That Trust KofeeTek</h2>
             <p className="section-subheading mx-auto text-center mt-3">
-              Leading corporates, manufacturers and healthcare providers across India.
+              Leading corporates, manufacturers and healthcare providers across South India.
             </p>
           </div>
 
@@ -540,7 +540,7 @@ export default function Clients() {
       <section className="py-16 bg-brand-cream">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h3 className="font-display text-2xl font-bold text-brand-brownDark mb-3">
-            Join 500+ Companies Across India
+            Join 500+ Companies Across South India
           </h3>
           <p className="text-brand-brown/60 mb-7 text-sm">
             Get a free demo today. No commitment required.

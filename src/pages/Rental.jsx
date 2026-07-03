@@ -124,9 +124,10 @@ export default function Rental() {
   return (
     <>
       <Helmet>
-        <title>Coffee Machine Rental Plans | KofeeTek – From ₹2,500/month</title>
-        <meta name="description" content="Rent a coffee or tea vending machine for your office. KofeeTek rental plans start at ₹2,500/month with full service support, refilling, and maintenance included." />
-        <link rel="canonical" href="https://www.kofeetek.in" />
+        <title>Coffee Vending Machine Manufacturers in Chennai | Kofeetek</title>
+        <meta name="description" content="Kofeetek is a trusted coffee vending machine manufacturer in Chennai, offering high-quality machines for offices, hotels, hospitals, and businesses with installation, maintenance, and reliable after-sales support." />
+        <meta name="keywords" content="coffee vending machine manufacturers in Chennai, coffee machine suppliers Chennai, best coffee vending machine manufacturers Chennai, beverage vending machine Chennai" />
+        <link rel="canonical" href="https://www.kofeetek.in/rental" />
       </Helmet>
 
       {/* Hero */}

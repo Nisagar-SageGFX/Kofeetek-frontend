@@ -36,9 +36,10 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact KofeeTek – Book a Free Demo | +91 80728 47972</title>
-        <meta name="description" content="Contact KofeeTek to schedule a free vending machine demo, request a quote, or inquire about rental plans. Serving Chennai, Coimbatore, Bangalore, Pune." />
-        <link rel="canonical" href="https://www.kofeetek.in" />
+        <title>Commercial Coffee Vending Machines for Sale | Kofeetek</title>
+        <meta name="description" content="Buy commercial coffee vending machines from Kofeetek for offices, hotels, cafés, and businesses. Explore high-quality, easy-to-maintain machines with expert installation, reliable performance, and after-sales support." />
+        <meta name="keywords" content="commercial coffee vending machines for sale, coffee vending machine manufacturer, commercial beverage vending machine, best commercial coffee vending machines" />
+        <link rel="canonical" href="https://www.kofeetek.in/contact" />
       </Helmet>
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-brand-dark to-brand-brownDark">
@@ -47,7 +48,7 @@ export default function Contact() {
           <h1 className="font-display text-5xl font-bold text-white mb-4">
             Let's Talk <span className="text-brand-gold">Coffee</span>
           </h1>
-          <p className="text-white/70 text-lg">Book a Free Demo — Coffee Vending Machines in Chennai. Our team responds within 24 hours.</p>
+          <p className="text-white/70 text-lg">Book a free demo, request a quote, or just say hello. Our team responds within 24 hours.</p>
         </div>
       </section>
 
@@ -60,7 +61,7 @@ export default function Contact() {
               {[
                 { icon: Phone, label: 'Phone / WhatsApp', value: '+91 80728 47972', href: 'tel:+918072847972' },
                 { icon: Mail,  label: 'Email',            value: 'info@kofeetek.in', href: 'mailto:info@kofeetek.in' },
-                { icon: MapPin,label: 'Head Office',      value: 'Plot No: 10, C-Block, G3, Kalpathru Garden, Priya Nagar, Urapakkam, Chennai, Tamil Nadu - 603210.'},
+                { icon: MapPin,label: 'Head Office',      value: 'PLOT NO: 10, C-Block, G3, Kalpathru Garden, Priya Nagar, Urapakkam, Chennai, Tamil Nadu - 603210.'},
                 { icon: Clock, label: 'Service Hours',    value: 'Mon–Sat: 10AM–6PM\nSunday: Closed' },
               ].map((c, i) => (
                 <a key={i} href={c.href} className="flex items-start gap-3 mb-5 last:mb-0 group">
@@ -80,7 +81,7 @@ export default function Contact() {
               <h3 className="font-semibold mb-3">Quick WhatsApp</h3>
               <p className="text-white/70 text-sm mb-4">Chat with us directly for faster response</p>
               <a
-                href="https://wa.me/919789728605?text=Hi%20KofeeTek%2C%20I%20would%20like%20to%20schedule%20a%20demo."
+                href="https://wa.me/918072847972?text=Hi%20KofeeTek%2C%20I%20would%20like%20to%20schedule%20a%20demo."
                 target="_blank" rel="noopener noreferrer"
                 className="btn-primary w-full justify-center text-sm"
               >
@@ -91,7 +92,7 @@ export default function Contact() {
             <div className="card-premium p-5">
               <div className="text-xs text-brand-brown/50 uppercase tracking-wider mb-3">Service Cities</div>
               <div className="flex flex-wrap gap-2">
-                {['Chennai', 'Coimbatore', 'Bangalore', 'Madurai', 'Hosur', 'Salem', 'Tirupur', 'Erode', 'Pune'].map(c => (
+                {['Chennai', 'Coimbatore', 'Bangalore', 'Madurai', 'Hosur', 'Salem', 'Tirupur', 'Erode'].map(c => (
                   <span key={c} className="text-xs bg-brand-beige text-brand-brown px-3 py-1.5 rounded-full">{c}</span>
                 ))}
               </div>
