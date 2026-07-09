@@ -11,10 +11,12 @@ const machines = [
 
 const quickLinks = [
   { label: 'About KofeeTek',      to: '/about'      },
-  { label: 'Industries We Serve', to: '/industries' },
-  { label: 'Our Clients',         to: '/clients'    },
-  { label: 'Teams',               to: '/teams'      },
+  // { label: 'Industries We Serve', to: '/industries' },
+  // { label: 'Our Clients',         to: '/clients'    },
   { label: 'Blog',                to: '/blog'       },
+  { label: 'Teams',               to: '/teams'      },
+  { label: 'Terms of Service',     to: '/terms-of-service' },
+  // { label: 'Privacy Policy',       to: '/privacy-policy'  },
   { label: 'Contact Us',          to: '/contact'    },
 ]
 
@@ -146,9 +148,9 @@ export default function Footer() {
             © {new Date().getFullYear()} KofeeTek Beverage Pvt Ltd. All rights reserved. ISO & FSSAI Registered.
           </span>
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 sm:gap-x-5">
-            <a href="#" className="hover:text-brand-gold transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-brand-gold transition-colors">Terms of Service</a>
-            <Link to="/blog" className="hover:text-brand-gold transition-colors">Sitemap</Link>
+            <Link to="/privacy-policy"   className="hover:text-brand-gold transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-brand-gold transition-colors">Terms of Service</Link>
+            {/* <Link to="/blog"             className="hover:text-brand-gold transition-colors">Sitemap</Link> */}
           </div>
         </div>
       </div>
