@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Phone, CheckCircle2, Star } from 'lucide-react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Float, Environment, OrbitControls } from '@react-three/drei'
+import { Float, Environment, OrbitControls, Text, RoundedBox, ContactShadows } from '@react-three/drei'
 
 /* ── Error boundary — catches WebGL / Three.js failures ─────────────────── */
 class ThreeBoundary extends Component {
@@ -35,97 +35,176 @@ function PhotoHero() {
   )
 }
 
-/* ── Realistic 3D KofeeTek machine (black + orange, like the real one) ───── */
+/* ── Photoreal KofeeTek rig — brewer + creamer unit, branded front door ──── */
 function MachineModel() {
   const ref = useRef()
   useFrame(state => {
     if (!ref.current) return
-    ref.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.32) * 0.2
-    ref.current.position.y = Math.sin(state.clock.elapsedTime * 0.48) * 0.06
+    ref.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.28) * 0.22
+    ref.current.position.y = Math.sin(state.clock.elapsedTime * 0.45) * 0.05
   })
 
+  // Shared material recipes so every panel reads as the same physical product
+  const bodyGloss = { color: '#0c0c0d', metalness: 0.55, roughness: 0.22, clearcoat: 0.6, clearcoatRoughness: 0.25 }
+  const doorGloss = { color: '#111113', metalness: 0.5, roughness: 0.28, clearcoat: 0.7, clearcoatRoughness: 0.2 }
+  const orangeAccent = { color: '#E8650A', emissive: '#E8650A', emissiveIntensity: 0.35, metalness: 0.4, roughness: 0.3 }
+  const steel = { color: '#c9c9c9', metalness: 0.95, roughness: 0.12 }
+
+  const buttons = [
+    { pos: [-0.32, 0.66], c: '#F5B800' }, { pos: [0.32, 0.66], c: '#F2C94C' },
+    { pos: [-0.32, 0.32], c: '#4499ff' }, { pos: [0.32, 0.32], c: '#E8650A' },
+    { pos: [-0.32, -0.02], c: '#4499ff' }, { pos: [0.32, -0.02], c: '#E8650A' },
+    { pos: [-0.32, -0.36], c: '#63c7ff' }, { pos: [0.32, -0.36], c: '#c0392b' },
+  ]
+
   return (
-    <group ref={ref} scale={[0.88, 0.88, 0.88]}>
-      {/* Main body – black */}
-      <mesh position={[0, 0.1, 0]} castShadow>
-        <boxGeometry args={[1.6, 2.8, 1.1]} />
-        <meshStandardMaterial color="#111111" metalness={0.7} roughness={0.2} />
-      </mesh>
-      {/* Orange top strip */}
-      <mesh position={[0, 1.52, 0]}>
-        <boxGeometry args={[1.62, 0.14, 1.12]} />
-        <meshStandardMaterial color="#E8650A" emissive="#E8650A" emissiveIntensity={0.25} metalness={0.5} roughness={0.3} />
-      </mesh>
-      {/* Orange left rail */}
-      <mesh position={[-0.82, 0.1, 0]}>
-        <boxGeometry args={[0.08, 2.8, 1.12]} />
-        <meshStandardMaterial color="#E8650A" emissive="#E8650A" emissiveIntensity={0.18} metalness={0.6} roughness={0.2} />
-      </mesh>
-      {/* Orange right rail */}
-      <mesh position={[0.82, 0.1, 0]}>
-        <boxGeometry args={[0.08, 2.8, 1.12]} />
-        <meshStandardMaterial color="#E8650A" emissive="#E8650A" emissiveIntensity={0.18} metalness={0.6} roughness={0.2} />
-      </mesh>
-      {/* LCD screen */}
-      <mesh position={[0, 1.08, 0.56]}>
-        <boxGeometry args={[1.1, 0.52, 0.04]} />
-        <meshStandardMaterial color="#0d1f3c" emissive="#1a5acc" emissiveIntensity={0.65} />
-      </mesh>
-      {/* Screen content */}
-      <mesh position={[0, 1.08, 0.585]}>
-        <boxGeometry args={[0.88, 0.36, 0.01]} />
-        <meshStandardMaterial color="#2266ff" emissive="#4488ff" emissiveIntensity={0.9} transparent opacity={0.8} />
-      </mesh>
-      {/* 8 beverage buttons (2×4 grid) */}
-      {[
-        [-0.28, 0.55], [0.28, 0.55],
-        [-0.28, 0.22], [0.28, 0.22],
-        [-0.28, -0.12], [0.28, -0.12],
-        [-0.28, -0.46], [0.28, -0.46],
-      ].map(([x, y], i) => (
-        <group key={i}>
-          <mesh position={[x, y, 0.558]}>
-            <boxGeometry args={[0.36, 0.22, 0.032]} />
-            <meshStandardMaterial color="#1a1a1a" roughness={0.5} />
+    <group ref={ref} scale={[0.8, 0.8, 0.8]}>
+      {/* ══════════ MAIN BREWER UNIT ══════════ */}
+      <group>
+        {/* Rear chassis */}
+        <RoundedBox args={[1.7, 3.0, 1.05]} radius={0.05} smoothness={4} position={[0, 0.05, -0.05]} castShadow receiveShadow>
+          <meshPhysicalMaterial {...bodyGloss} />
+        </RoundedBox>
+
+        {/* Recessed front door panel */}
+        <RoundedBox args={[1.5, 2.86, 0.15]} radius={0.04} smoothness={4} position={[0, 0.1, 0.52]} castShadow>
+          <meshPhysicalMaterial {...doorGloss} />
+        </RoundedBox>
+
+        {/* Orange frame — top / left / right, matching the real housing trim */}
+        <RoundedBox args={[1.66, 0.1, 1.1]} radius={0.03} smoothness={3} position={[0, 1.55, 0.02]}>
+          <meshStandardMaterial {...orangeAccent} />
+        </RoundedBox>
+        <RoundedBox args={[0.07, 2.9, 1.1]} radius={0.02} smoothness={3} position={[-0.85, 0.05, 0.02]}>
+          <meshStandardMaterial {...orangeAccent} />
+        </RoundedBox>
+        <RoundedBox args={[0.07, 2.9, 1.1]} radius={0.02} smoothness={3} position={[0.85, 0.05, 0.02]}>
+          <meshStandardMaterial {...orangeAccent} />
+        </RoundedBox>
+
+        {/* LCD housing + glow + fake status lines */}
+        <mesh position={[0, 1.12, 0.605]}>
+          <boxGeometry args={[1.0, 0.44, 0.035]} />
+          <meshStandardMaterial color="#050912" roughness={0.4} />
+        </mesh>
+        <mesh position={[0, 1.12, 0.626]}>
+          <planeGeometry args={[0.86, 0.32]} />
+          <meshStandardMaterial color="#123a7a" emissive="#2f6fe0" emissiveIntensity={1.1} />
+        </mesh>
+        <mesh position={[0, 1.18, 0.628]}>
+          <planeGeometry args={[0.62, 0.05]} />
+          <meshStandardMaterial color="#8fd6ff" emissive="#8fd6ff" emissiveIntensity={1.4} />
+        </mesh>
+        <mesh position={[0, 1.06, 0.628]}>
+          <planeGeometry args={[0.72, 0.045]} />
+          <meshStandardMaterial color="#63b8ff" emissive="#63b8ff" emissiveIntensity={1.1} />
+        </mesh>
+
+        {/* 8 beverage buttons (2×4 grid), each lit like the real keypad */}
+        {buttons.map(({ pos: [x, y], c }, i) => (
+          <group key={i} position={[x, y, 0]}>
+            <RoundedBox args={[0.4, 0.24, 0.04]} radius={0.03} smoothness={3} position={[0, 0, 0.635]}>
+              <meshStandardMaterial color="#161616" roughness={0.45} metalness={0.2} />
+            </RoundedBox>
+            <mesh position={[0, 0.045, 0.662]}>
+              <circleGeometry args={[0.05, 16]} />
+              <meshStandardMaterial color={c} emissive={c} emissiveIntensity={0.9} />
+            </mesh>
+            <mesh position={[0, -0.06, 0.661]}>
+              <planeGeometry args={[0.26, 0.028]} />
+              <meshStandardMaterial color="#e8e8e8" emissive="#e8e8e8" emissiveIntensity={0.3} />
+            </mesh>
+          </group>
+        ))}
+
+        {/* KOFEETEK brand mark + tagline, embossed on the door */}
+        <Text
+          position={[0, -0.6, 0.635]}
+          fontSize={0.14}
+          letterSpacing={0.02}
+          anchorX="center"
+          anchorY="middle"
+          color="#ffffff"
+        >
+          KOFEETEK
+        </Text>
+        <Text
+          position={[0, -0.77, 0.635]}
+          fontSize={0.058}
+          letterSpacing={0.14}
+          anchorX="center"
+          anchorY="middle"
+          color="#E8650A"
+        >
+          FEEL THE BREWS
+        </Text>
+
+        {/* Lock + key ring, right edge of the door */}
+        <mesh position={[0.78, 0.35, 0.66]} rotation={[Math.PI / 2, 0, 0]}>
+          <cylinderGeometry args={[0.035, 0.035, 0.05, 12]} />
+          <meshStandardMaterial {...steel} />
+        </mesh>
+        <mesh position={[0.78, 0.24, 0.66]}>
+          <torusGeometry args={[0.045, 0.008, 8, 16]} />
+          <meshStandardMaterial {...steel} />
+        </mesh>
+
+        {/* Dispense nozzle */}
+        <mesh position={[0, -1.0, 0.68]}>
+          <cylinderGeometry args={[0.035, 0.055, 0.2, 14]} />
+          <meshStandardMaterial {...steel} />
+        </mesh>
+
+        {/* Brushed drip tray */}
+        <RoundedBox args={[1.35, 0.07, 0.36]} radius={0.02} smoothness={3} position={[0, -1.24, 0.68]}>
+          <meshStandardMaterial {...steel} />
+        </RoundedBox>
+
+        {/* Base plinth */}
+        <RoundedBox args={[2.0, 0.1, 1.35]} radius={0.02} smoothness={3} position={[0, -1.62, 0.05]}>
+          <meshStandardMaterial color="#0a0a0a" metalness={0.5} roughness={0.5} />
+        </RoundedBox>
+      </group>
+
+      {/* ══════════ SIDE CREAMER / MILK UNIT ══════════ */}
+      <group position={[1.4, -0.42, -0.35]} rotation={[0, -0.18, 0]}>
+        <RoundedBox args={[1.15, 1.55, 1.35]} radius={0.05} smoothness={4} castShadow receiveShadow>
+          <meshPhysicalMaterial {...bodyGloss} />
+        </RoundedBox>
+        {/* Twin canister lids with grab handles */}
+        {[[-0.24, 0.15], [0.24, -0.1]].map(([x, z], i) => (
+          <group key={i} position={[x, 0.8, z]}>
+            <mesh>
+              <cylinderGeometry args={[0.34, 0.34, 0.05, 24]} />
+              <meshStandardMaterial {...steel} />
+            </mesh>
+            <mesh position={[0, 0.05, 0]} rotation={[Math.PI / 2, 0, 0]}>
+              <torusGeometry args={[0.12, 0.018, 8, 20, Math.PI]} />
+              <meshStandardMaterial color="#0d0d0d" metalness={0.3} roughness={0.6} />
+            </mesh>
+          </group>
+        ))}
+        {/* Feet */}
+        {[-0.5, 0.5].map((x, i) => (
+          <mesh key={i} position={[x, -0.8, 0.55]}>
+            <cylinderGeometry args={[0.05, 0.06, 0.08, 10]} />
+            <meshStandardMaterial color="#111" roughness={0.6} />
           </mesh>
-          <mesh position={[x, y + 0.04, 0.582]}>
-            <circleGeometry args={[0.042, 12]} />
-            <meshStandardMaterial color="#4499ff" emissive="#4499ff" emissiveIntensity={0.85} />
-          </mesh>
-        </group>
-      ))}
-      {/* Nozzle */}
-      <mesh position={[0, -0.92, 0.62]}>
-        <cylinderGeometry args={[0.04, 0.06, 0.18, 12]} />
-        <meshStandardMaterial color="#aaaaaa" metalness={0.9} roughness={0.1} />
+        ))}
+      </group>
+
+      {/* Connector tube between units, with orange fittings */}
+      <mesh position={[0.98, -0.28, 0.66]} rotation={[0, 0, Math.PI / 2.4]}>
+        <cylinderGeometry args={[0.028, 0.028, 0.55, 10]} />
+        <meshStandardMaterial color="#e9e9e9" roughness={0.4} />
       </mesh>
-      {/* Drip tray */}
-      <mesh position={[0, -1.12, 0.62]}>
-        <boxGeometry args={[1.1, 0.06, 0.3]} />
-        <meshStandardMaterial color="#c0c0c0" metalness={0.95} roughness={0.05} />
+      <mesh position={[0.82, -0.05, 0.66]}>
+        <sphereGeometry args={[0.05, 12, 12]} />
+        <meshStandardMaterial {...orangeAccent} />
       </mesh>
-      {/* KofeeTek logo plate */}
-      <mesh position={[0, -0.56, 0.557]}>
-        <boxGeometry args={[0.7, 0.13, 0.022]} />
-        <meshStandardMaterial color="#E8650A" emissive="#E8650A" emissiveIntensity={0.4} />
-      </mesh>
-      {/* Base */}
-      <mesh position={[0, -1.52, 0]}>
-        <boxGeometry args={[1.9, 0.1, 1.3]} />
-        <meshStandardMaterial color="#0d0d0d" metalness={0.6} roughness={0.4} />
-      </mesh>
-      {/* Side milk unit */}
-      <mesh position={[1.28, -0.22, 0]}>
-        <boxGeometry args={[0.55, 1.75, 1.0]} />
-        <meshStandardMaterial color="#1a1a1a" metalness={0.5} roughness={0.4} />
-      </mesh>
-      <mesh position={[1.28, 0.69, 0]}>
-        <cylinderGeometry args={[0.28, 0.26, 0.08, 20]} />
-        <meshStandardMaterial color="#888" metalness={0.9} roughness={0.1} />
-      </mesh>
-      <mesh position={[1.57, -0.32, 0.2]}>
-        <sphereGeometry args={[0.052, 12, 12]} />
-        <meshStandardMaterial color="#E8650A" emissive="#E8650A" emissiveIntensity={0.65} />
+      <mesh position={[1.18, -0.52, 0.55]}>
+        <sphereGeometry args={[0.045, 12, 12]} />
+        <meshStandardMaterial {...orangeAccent} />
       </mesh>
     </group>
   )
@@ -151,14 +230,16 @@ function Scene() {
   return (
     <>
       <Environment preset="studio" />
-      <ambientLight intensity={0.4} />
+      <ambientLight intensity={0.5} />
       <pointLight position={[4, 5, 4]} intensity={1.8} color="#F5B800" />
       <pointLight position={[-4, 2, -3]} intensity={0.7} color="#ffffff" />
       <pointLight position={[0, -3, 4]} intensity={0.5} color="#E8650A" />
+      <pointLight position={[0, 0.2, 6]} intensity={0.55} color="#ffffff" />
       <spotLight position={[0, 8, 5]} intensity={1.4} angle={0.4} penumbra={0.6} castShadow />
       <Float speed={0.95} rotationIntensity={0.07} floatIntensity={0.18}>
         <MachineModel />
       </Float>
+      <ContactShadows position={[0, -1.85, 0]} opacity={0.55} scale={9} blur={2.6} far={3} resolution={512} color="#000000" />
       {[[-3.0, 0.5, -0.5], [3.3, -0.4, -0.8], [-2.6, -1.6, 0.3],
       [2.9, 1.7, 0.2], [-2.9, 1.9, -0.3], [3.1, 0.1, 0.6],
       [-2.1, -0.9, -0.9], [3.7, -1.1, 0.4]].map((p, i) => (

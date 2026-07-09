@@ -8,7 +8,7 @@ const consumables = [
   {
     name: 'Filter Coffee Powder',
     subtitle: 'Vend & Blend',
-    image: '/assets/consumables/coffee.webp',
+    image: '/assets/consumables/Filter Coffee Powder.webp',
     color: '#4A2C1D',
     light: '#FFF0E6',
     desc: 'Premium Arabica & Robusta blend roasted to South Indian perfection. Rich aroma, strong body.',
@@ -18,7 +18,7 @@ const consumables = [
   {
     name: 'Fine Assam Tea Powder',
     subtitle: 'CTC Premium Blend',
-    image: '/assets/consumables/tea.webp',
+    image: '/assets/consumables/Fine Assam Tea.webp',
     color: '#2E6B35',
     light: '#F0FFF2',
     desc: 'Selected Assam CTC leaves for excellent milk tea performance. Strong liquor, vibrant color.',
@@ -28,7 +28,7 @@ const consumables = [
   {
     name: 'Badam Mix Powder',
     subtitle: 'Real Almond Blend',
-    image: '/assets/consumables/badam_mix.webp',
+    image: '/assets/consumables/Badam Mix Powder.webp',
     color: '#C2773A',
     light: '#FFF8F0',
     desc: 'Real almonds, saffron, cardamom — a premium health drink loved by every workplace.',
@@ -38,7 +38,7 @@ const consumables = [
   {
     name: 'Masala Tea Powder',
     subtitle: 'Spiced Chai Blend',
-    image: '/assets/consumables/masala_tea.webp',
+    image: '/assets/consumables/Masala Tea.webp',
     color: '#7B3F00',
     light: '#FFF5ED',
     desc: 'Ginger, cardamom, cinnamon and clove — our masala chai is a workforce favourite.',
@@ -48,7 +48,7 @@ const consumables = [
   {
     name: 'Chocolate Mix Powder',
     subtitle: 'Rich Cocoa Blend',
-    image: '/assets/consumables/chocolate.webp',
+    image: '/assets/consumables/Chocolate Mix Powder.webp',
     color: '#3D1F0D',
     light: '#FFF2EC',
     desc: 'Rich cocoa powder blend — perfect for cold mornings and employee delight.',
@@ -58,7 +58,7 @@ const consumables = [
   {
     name: 'Natural Jaggery Powder',
     subtitle: 'Chemical-Free Sweetener',
-    image: '/assets/consumables/jaggery.webp',
+    image: '/assets/consumables/Natural Jaggery Powder.PNG',
     color: '#7C4D2A',
     light: '#FFF8F0',
     desc: 'Pure sugarcane jaggery — the healthier alternative to refined sugar for office beverages.',
@@ -68,7 +68,7 @@ const consumables = [
   {
     name: 'Herbal Lemon Tea Mix',
     subtitle: 'Citrus Refresh Blend',
-    image: '/assets/consumables/lemon.webp',
+    image: '/assets/consumables/Herbal Lemon Tea.webp',
     color: '#B8860B',
     light: '#FFFFF0',
     desc: 'Refreshing herbal lemon tea — excellent for afternoon energy without caffeine.',
@@ -78,7 +78,7 @@ const consumables = [
   {
     name: 'Protein Ragi Malt',
     subtitle: 'Health Drink',
-    image: '/assets/consumables/coffee.webp',
+    image: '/assets/consumables/Protein Ragi Malt.png',
     color: '#5A7A3A',
     light: '#F5FFF0',
     desc: 'Nutrient-dense ragi malt with natural sweeteners — a healthy choice for health-conscious workplaces.',
@@ -88,7 +88,7 @@ const consumables = [
   {
     name: 'Paper Cups',
     subtitle: 'FSC Certified',
-    image: '/assets/consumables/Cups1.PNG',
+    image: '/assets/consumables/Cups.PNG',
     color: '#9B7653',
     light: '#FFF8F0',
     desc: 'Food-grade, biodegradable paper cups available in 100ml and 180ml sizes.',
