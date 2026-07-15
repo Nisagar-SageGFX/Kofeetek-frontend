@@ -170,7 +170,7 @@ export default function Products() {
                     src={m.image}
                     alt={m.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onError={e => { e.target.src = '/assets/images/brochure.png' }}
+                    onError={e => { e.target.onerror = null; e.target.src = '/assets/machines/machine_hero.jpeg' }}
                   />
                   <span className={`absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full shadow ${badgeColors[m.badge]}`}>
                     {m.badge}

@@ -64,13 +64,13 @@ export default function ConsumableSection() {
         </div>
 
         {/* Product range showcase */}
-        <div className="reveal rounded-2xl overflow-hidden shadow-lg">
+        {/* <div className="reveal rounded-2xl overflow-hidden shadow-lg">
           <img
             src="/assets/machines/machine4.jpeg"
             alt="KofeeTek Full Product Range"
             className="w-full object-cover max-h-[260px]"
           />
-        </div>
+        </div> */}
       </div>
     </section>
   )

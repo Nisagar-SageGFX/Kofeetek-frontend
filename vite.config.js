@@ -5,19 +5,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    proxy: {
-      // Dev proxy: forwards /api calls to local backend during development
-      '/api': {
-        target: 'http://localhost:5000',
-        changeOrigin: true,
-      }
-    },
   },
   optimizeDeps: {
     include: [
       'react', 'react-dom', 'react-router-dom',
       'three', '@react-three/fiber', '@react-three/drei',
-      'framer-motion', 'gsap',
+      'framer-motion',
       '@supabase/supabase-js',
     ],
   },
@@ -29,7 +22,7 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
           three: ['three', '@react-three/fiber', '@react-three/drei'],
-          animation: ['framer-motion', 'gsap'],
+          animation: ['framer-motion'],
         }
       }
     }

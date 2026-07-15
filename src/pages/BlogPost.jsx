@@ -257,7 +257,7 @@ export default function BlogPost() {
             url:     'https://www.kofeetek.in',
             logo: {
               '@type': 'ImageObject',
-              url:     'https://www.kofeetek.in/assets/logo/Kofeetek_logo.PNG',
+              url:     'https://www.kofeetek.in/assets/logo/kofeetek_logo.png',
             },
           },
           keywords: post.tags.join(', '),
