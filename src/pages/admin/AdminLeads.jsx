@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { supabase } from '../../lib/supabase'
-import { Phone, Mail, Search, AlertTriangle } from 'lucide-react'
+import { fetchLeads, updateLead, deleteLead } from '../../lib/api'
+import { Phone, Mail, Search, AlertTriangle, Trash2 } from 'lucide-react'
 import toast from 'react-hot-toast'
 
 const STATUSES = ['new', 'contacted', 'qualified', 'demo_scheduled', 'closed']
@@ -13,21 +13,19 @@ const statusColors = {
 }
 
 export default function AdminLeads() {
-  const [leads,    setLeads]    = useState([])
-  const [loading,  setLoading]  = useState(true)
-  const [error,    setError]    = useState(null)
-  const [filter,   setFilter]   = useState('all')
-  const [search,   setSearch]   = useState('')
-  const [notes,    setNotes]    = useState({})  // { [id]: string }
+  const [leads,      setLeads]      = useState([])
+  const [loading,    setLoading]    = useState(true)
+  const [error,      setError]      = useState(null)
+  const [filter,     setFilter]     = useState('all')
+  const [search,     setSearch]     = useState('')
+  const [notes,      setNotes]      = useState({})   // { [id]: string }
+  const [deletingId, setDeletingId] = useState(null) // id currently being deleted (disables its row)
 
   const load = async () => {
     setLoading(true)
     setError(null)
     try {
-      let q = supabase.from('leads').select('*').order('created_at', { ascending: false })
-      if (filter !== 'all') q = q.eq('status', filter)
-      const { data, error: err } = await q
-      if (err) throw err
+      const data = await fetchLeads({ status: filter })
       setLeads(data || [])
     } catch (err) {
       setError(err.message)
@@ -39,20 +37,40 @@ export default function AdminLeads() {
   useEffect(() => { load() }, [filter])
 
   const updateStatus = async (id, status) => {
-    const { error: err } = await supabase.from('leads').update({ status }).eq('id', id)
-    if (err) { toast.error(err.message); return }
-    toast.success('Status updated')
-    setLeads(prev => prev.map(l => l.id === id ? { ...l, status } : l))
+    try {
+      await updateLead(id, { status })
+      toast.success('Status updated')
+      setLeads(prev => prev.map(l => l.id === id ? { ...l, status } : l))
+    } catch (err) {
+      toast.error(err.message)
+    }
   }
 
   const saveNote = async (id) => {
     const note = notes[id]
     if (note === undefined) return
-    const { error: err } = await supabase.from('leads').update({ notes: note }).eq('id', id)
-    if (err) { toast.error(err.message); return }
-    toast.success('Note saved')
-    setNotes(prev => { const n = { ...prev }; delete n[id]; return n })
-    setLeads(prev => prev.map(l => l.id === id ? { ...l, notes: note } : l))
+    try {
+      await updateLead(id, { notes: note })
+      toast.success('Note saved')
+      setNotes(prev => { const n = { ...prev }; delete n[id]; return n })
+      setLeads(prev => prev.map(l => l.id === id ? { ...l, notes: note } : l))
+    } catch (err) {
+      toast.error(err.message)
+    }
+  }
+
+  const handleDelete = async (id) => {
+    if (!window.confirm('Are you sure you want to delete this lead?')) return
+    setDeletingId(id)
+    try {
+      await deleteLead(id)
+      setLeads(prev => prev.filter(l => l.id !== id))
+      toast.success('Lead deleted')
+    } catch (err) {
+      toast.error(err.message || 'Failed to delete lead')
+    } finally {
+      setDeletingId(null)
+    }
   }
 
   const filtered = leads.filter(l =>
@@ -100,7 +118,6 @@ export default function AdminLeads() {
           <div>
             <p className="font-semibold text-red-700 text-sm">Error loading leads</p>
             <p className="text-red-600 text-xs mt-1 font-mono">{error}</p>
-            <p className="text-red-500 text-xs mt-2">Run <strong>supabase/fix_rls.sql</strong> in your Supabase SQL Editor to fix permissions.</p>
           </div>
         </div>
       )}
@@ -120,7 +137,8 @@ export default function AdminLeads() {
       ) : (
         <div className="space-y-3">
           {filtered.map(lead => (
-            <div key={lead.id} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+            <div key={lead.id}
+              className={`bg-white rounded-2xl border border-gray-100 shadow-sm p-5 transition-opacity ${deletingId === lead.id ? 'opacity-50 pointer-events-none' : ''}`}>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                 {/* Name + Company */}
                 <div>
@@ -150,12 +168,23 @@ export default function AdminLeads() {
                   <div className="text-xs text-brand-brown/40 mt-0.5 capitalize">{lead.employees} employees</div>
                 </div>
                 {/* Date + Type */}
-                <div>
-                  <div className="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Received</div>
-                  <div className="text-xs text-brand-brown/70">
-                    {lead.created_at ? new Date(lead.created_at).toLocaleDateString('en-IN', { day:'2-digit', month:'short', year:'numeric' }) : '—'}
+                <div className="flex items-start justify-between">
+                  <div>
+                    <div className="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Received</div>
+                    <div className="text-xs text-brand-brown/70">
+                      {lead.created_at ? new Date(lead.created_at).toLocaleDateString('en-IN', { day:'2-digit', month:'short', year:'numeric' }) : '—'}
+                    </div>
+                    <div className="text-xs text-brand-brown/45 mt-0.5 capitalize">{lead.inquiry_type}</div>
                   </div>
-                  <div className="text-xs text-brand-brown/45 mt-0.5 capitalize">{lead.inquiry_type}</div>
+                  {/* Delete action */}
+                  <button
+                    onClick={() => handleDelete(lead.id)}
+                    disabled={deletingId === lead.id}
+                    title="Delete lead"
+                    className="text-red-400 hover:text-red-600 hover:bg-red-50 p-1.5 rounded-lg transition-colors disabled:opacity-50"
+                  >
+                    <Trash2 size={15} />
+                  </button>
                 </div>
               </div>
 

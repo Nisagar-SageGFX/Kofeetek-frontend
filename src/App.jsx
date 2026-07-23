@@ -16,7 +16,7 @@ const Clients     = lazy(() => import('./pages/Clients'))
 const Contact     = lazy(() => import('./pages/Contact'))
 const Blog        = lazy(() => import('./pages/Blog'))
 const BlogPost    = lazy(() => import('./pages/BlogPost'))
-const Teams          = lazy(() => import('./pages/Teams'))
+// const Teams          = lazy(() => import('./pages/Teams'))
 const TermsOfService = lazy(() => import('./pages/TermsOfService'))
 const PrivacyPolicy  = lazy(() => import('./pages/PrivacyPolicy'))
 
@@ -59,7 +59,7 @@ export default function App() {
             <Route path="contact"     element={<><Contact /></>} />
             <Route path="blog"        element={<><Blog /></>} />
             <Route path="blog/:slug"  element={<><BlogPost /></>} />
-            <Route path="teams"           element={<><Teams /></>} />
+            {/* <Route path="teams"           element={<><Teams /></>} /> */}
             <Route path="terms-of-service" element={<><TermsOfService /></>} />
             <Route path="privacy-policy"   element={<><PrivacyPolicy /></>} />
           </Route>

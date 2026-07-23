@@ -12,9 +12,9 @@ const machines = [
 const quickLinks = [
   { label: 'About KofeeTek',      to: '/about'      },
   // { label: 'Industries We Serve', to: '/industries' },
-  // { label: 'Our Clients',         to: '/clients'    },
+   { label: 'Our Clients',         to: '/clients'    },
   { label: 'Blog',                to: '/blog'       },
-  { label: 'Teams',               to: '/teams'      },
+  // { label: 'Teams',               to: '/teams'      },
   { label: 'Terms of Service',     to: '/terms-of-service' },
   // { label: 'Privacy Policy',       to: '/privacy-policy'  },
   { label: 'Contact Us',          to: '/contact'    },
@@ -254,7 +254,7 @@ function BrandBlock({ tablet, mobile }) {
     <div className={`flex flex-col ${tablet ? 'items-start' : mobile ? 'items-center' : 'items-start'}`}>
       <Link to="/" className="inline-block mb-4">
         <img
-          src="/assets/logo/Kofeetek_logo.PNG"
+          src="/assets/logo/kofeetek_logo.png"
           alt="KofeeTek"
           className="h-10 sm:h-12 object-contain"
         />
